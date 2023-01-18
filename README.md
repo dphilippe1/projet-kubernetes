@@ -10,9 +10,9 @@ Ensuite, il est nécessaire de configurer Prometheus pour collecter des métriqu
 
 Ensuite, il faut installer Grafana en utilisant un fichier de déploiement Kubernetes.
 
-Il est important de configurer Grafana pour se connecter à Prometheus en tant que source de données. Cela peut être fait en ajoutant un "datasource" Prometheus dans les paramètres de Grafana, en spécifiant l'URL d'accès à Prometheus via l'interface graphique de Grafana.
+Pour cela il est important de configurer Grafana pour se connecter à Prometheus en tant que source de données. Cela peut être fait en ajoutant une "datasource" Prometheus dans les paramètres de Grafana, soit en spécifiant l'URL d'accès à Prometheus, soit via l'interface graphique de Grafana.
 
-À la suite de ces étapes, il est possible de créer des tableaux de bord Grafana pour afficher les métriques collectées par Prometheus en utilisant les widgets Grafana pour visualiser les données et des requêtes Prometheus pour les récupérer.
+À la suite de ces étapes, il est possible de créer des tableaux de bord Grafana pour afficher les métriques collectées par Prometheus en utilisant les widgets Grafana pour visualiser les données, et des requêtes Prometheus pour les récupérer.
 
 
 Concernant la partie applicative wordpress :
@@ -20,6 +20,6 @@ Concernant la partie applicative wordpress :
 Le dossier wordpress contient 3 fichiers distincts :
 - un fichier kustomization.yaml qui est un outil permettant de modeler les configurations Kubernetes et de gérer des collections de configurations
 - un fichier wordpress-deployment.yaml qui contient la configuration relative au déploiement de la partie applicative web et du CMS Wordpress
-- un fichier mysql-deplyment qui contient la partie "backend" avec le déploiement relatif à la base de données
+- un fichier mysql-deployment qui contient la partie "backend" avec le déploiement relatif à la base de données
 
 L'implémentation de l'ensemble de l'application Wordpress s'effectue grâce au fichier kustomisation.yaml qui permet lancer simulatanément le "frontend" et le "backend" ainsi que de générer un mot de passe (secret) pour l'accès à la base de données mysql.
