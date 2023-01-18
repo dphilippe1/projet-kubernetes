@@ -16,7 +16,8 @@ Il est important de configurer Grafana pour se connecter à Prometheus en tant q
 
 
 Concernant la partie applicative wordpress :
-Le fichier wordpress contient 3 fichiers distincts :
+
+Le dossier wordpress contient 3 fichiers distincts :
 - un fichier kustomization.yaml qui est un outil permettant de modeler les configurations Kubernetes et de gérer des collections de configurations
 - un fichier wordpress-deployment.yaml qui contient la configuration relative au déploiement de la partie applicative web et du CMS Wordpress
 - un fichier mysql-deplyment qui contient la partie "backend" avec le déploiement relatif à la base de données
