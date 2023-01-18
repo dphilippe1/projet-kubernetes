@@ -6,9 +6,9 @@ Concernant la mise en place de Grafana couplé à Prometheus sur Kubernetes, voi
 
 Tout d'abord, il est nécessaire d'installer Prometheus sur le cluster Kubernetes en utilisant un fichier de configuration Prometheus approprié. Cela est réalisé en utilisant un fichier de déploiement Kubernetes, qui définit les conteneurs nécessaires et les ressources requises.
 
-Ensuite, il est nécessaire de configurer Prometheus pour collecter des métriques à partir de vos conteneurs Kubernetes en utilisant le module de collecte de métriques Kubernetes de Prometheus. Ceci est réalisé en ajoutant des annotations aux conteneurs pour indiquer à Prometheus quelles métriques collecter.
+Ensuite, il est nécessaire de configurer Prometheus pour collecter des métriques à partir des conteneurs Kubernetes en utilisant le module de collecte de métriques Kubernetes de Prometheus. Ceci est réalisé en ajoutant des annotations aux conteneurs pour indiquer à Prometheus quelles métriques collecter.
 
-Ensuite, il faut installer Grafana en utilisant un fichier de déploiement Kubernetes similaire à celui utilisé pour Prometheus.
+Ensuite, il faut installer Grafana en utilisant un fichier de déploiement Kubernetes.
 
 Il est important de configurer Grafana pour se connecter à Prometheus en tant que source de données. Cela peut être fait en ajoutant un "datasource" Prometheus dans les paramètres de Grafana, en spécifiant l'URL d'accès à Prometheus via l'interface graphique de Grafana.
 
